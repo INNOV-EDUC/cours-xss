@@ -1,0 +1,42 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>{{ entity.name }}</h1>
+
+    <table class="record_properties">
+        <tbody>
+        <tr>
+            <th>Price&nbsp;</th>
+            <td>{{ entity.price }}€</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="shop">
+        <a href="http://www.caisse-epargne.fr/particuliers/languedoc-roussillon/accueil.aspx"><button class="btn btn-default btn-success" id="buy">Achat impulsif</button></a>
+    </div>
+
+    <div class="comments">
+        <h2>Commentaires</h2>
+        {% if not comments|length %}
+            <p>No comment</p>
+        {% else %}
+            <ul>
+                {% for comment in comments %}
+                    <li>{{ comment.content|raw }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {{ form(newcomment_form) }}
+    </div>
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('sweet') }}">
+                Back to the list
+            </a>
+        </li>
+    </ul>
+{% endblock %}
+
+{# <script>$('#shop a').attr('href','https://www.secure.bnpparibas.net/banque/portail/particulier/HomePage?type=site')</script> #}

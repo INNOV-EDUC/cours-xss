@@ -1,0 +1,26 @@
+WCS\XSSBundle\Entity\Comment:
+    type: entity
+    table: null
+    repositoryClass: WCS\XSSBundle\Entity\CommentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        content:
+            type: text
+        author:
+            type: string
+            length: 255
+
+    manyToOne:
+        sweet:
+            targetEntity: WCS\XSSBundle\Entity\Sweet
+            inversedBy: comments
+            joinColumn:
+                name: sweet_id
+                referencedColumnName: id
+
+    lifecycleCallbacks: {  }

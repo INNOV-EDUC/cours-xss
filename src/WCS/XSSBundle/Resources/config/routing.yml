@@ -1,0 +1,15 @@
+wcsxss_comment:
+    resource: "@WCSXSSBundle/Resources/config/routing/comment.yml"
+    prefix:   /comment
+
+wcsxss_sweet:
+    resource: "@WCSXSSBundle/Resources/config/routing/sweet.yml"
+    prefix:   /sweet
+
+wcsxss_user:
+    resource: "@WCSXSSBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+wcsxss_homepage:
+    path:     /
+    defaults: { _controller: WCSXSSBundle:Default:index }

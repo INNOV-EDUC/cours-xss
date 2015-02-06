@@ -1,0 +1,19 @@
+<?php
+
+namespace WCS\XSSBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Comment
+ */
+class Comment
+{
+
+
+
+
+
+
+    // YAML GENERATED CODE
+}

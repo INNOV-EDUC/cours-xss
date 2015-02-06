@@ -1,0 +1,30 @@
+comment:
+    path:     /
+    defaults: { _controller: "WCSXSSBundle:Comment:index" }
+
+comment_show:
+    path:     /{id}/show
+    defaults: { _controller: "WCSXSSBundle:Comment:show" }
+
+comment_new:
+    path:     /new
+    defaults: { _controller: "WCSXSSBundle:Comment:new" }
+
+comment_create:
+    path:     /create
+    defaults: { _controller: "WCSXSSBundle:Comment:create" }
+    requirements: { _method: post }
+
+comment_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WCSXSSBundle:Comment:edit" }
+
+comment_update:
+    path:     /{id}/update
+    defaults: { _controller: "WCSXSSBundle:Comment:update" }
+    requirements: { _method: post|put }
+
+comment_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WCSXSSBundle:Comment:delete" }
+    requirements: { _method: post|delete }

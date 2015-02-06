@@ -1,0 +1,30 @@
+user:
+    path:     /
+    defaults: { _controller: "WCSXSSBundle:User:index" }
+
+user_show:
+    path:     /{id}/show
+    defaults: { _controller: "WCSXSSBundle:User:show" }
+
+user_new:
+    path:     /new
+    defaults: { _controller: "WCSXSSBundle:User:new" }
+
+user_create:
+    path:     /create
+    defaults: { _controller: "WCSXSSBundle:User:create" }
+    requirements: { _method: post }
+
+user_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WCSXSSBundle:User:edit" }
+
+user_update:
+    path:     /{id}/update
+    defaults: { _controller: "WCSXSSBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WCSXSSBundle:User:delete" }
+    requirements: { _method: post|delete }
